@@ -99,6 +99,7 @@ sky_mode = 2
 [node name="helper" type="Node3D" parent="."]
 
 [node name="FastFpsDisplay" parent="helper" instance=ExtResource("4_yjho2")]
+visible = false
 
 [node name="FastInputHandlers" parent="helper" instance=ExtResource("5_lbrvh")]
 
