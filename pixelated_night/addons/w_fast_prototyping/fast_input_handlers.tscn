@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wb1j8no3dapb"]
+
+[ext_resource type="Script" path="res://addons/w_fast_prototyping/fast_input_handlers/FastInputHandlers.gd" id="1_ckacr"]
+
+[node name="FastInputHandlers" type="Node2D"]
+script = ExtResource("1_ckacr")

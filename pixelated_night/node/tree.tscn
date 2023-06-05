@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dk5pdh88f3bdr"]
+[gd_scene load_steps=14 format=3 uid="uid://dk5pdh88f3bdr"]
 
 [ext_resource type="Texture2D" uid="uid://dqxp0m7enjhh8" path="res://node/noise.tres" id="1_7affk"]
 [ext_resource type="Texture2D" uid="uid://c26blg3hxd2ng" path="res://asset/generated/tree_qgpuO_2K_Albedo-qgpuO_2K_Opacity.png" id="1_q21pt"]
@@ -159,6 +159,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8318d")
 
-[node name="body" type="MeshInstance3D"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_seuas"]
+
+[node name="tree" type="Node3D"]
+
+[node name="body" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("ArrayMesh_18oak")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="body"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="body/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_seuas")

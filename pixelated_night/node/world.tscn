@@ -1,3 +1,161 @@
-[gd_scene format=3 uid="uid://3w2laew46fk6"]
+[gd_scene load_steps=28 format=3 uid="uid://3w2laew46fk6"]
+
+[ext_resource type="Texture2D" uid="uid://di0aspjo2lunu" path="res://asset/Ground_Forest_tjeiabug_2K_surface_ms/tjeiabug_2K_Albedo.jpg" id="1_6p33q"]
+[ext_resource type="Texture2D" uid="uid://dpejigx0x22gg" path="res://asset/stars3.jpg" id="1_vgh1y"]
+[ext_resource type="Texture2D" uid="uid://bxb2paca8v0ej" path="res://asset/Ground_Forest_tjeiabug_2K_surface_ms/tjeiabug_2K_Normal.jpg" id="2_ofb51"]
+[ext_resource type="Texture2D" uid="uid://cla433cklqulv" path="res://asset/Ground_Forest_tjeiabug_2K_surface_ms/tjeiabug_2K_Roughness.jpg" id="3_hdtyw"]
+[ext_resource type="PackedScene" uid="uid://h6gtky8j7fr8" path="res://addons/w_fast_prototyping/fast_fps_display.tscn" id="4_yjho2"]
+[ext_resource type="PackedScene" uid="uid://wb1j8no3dapb" path="res://addons/w_fast_prototyping/fast_input_handlers.tscn" id="5_lbrvh"]
+[ext_resource type="PackedScene" uid="uid://bvru8bd33ljx5" path="res://addons/w_fast_prototyping/fast_player_character_third_person.tscn" id="6_gidbf"]
+[ext_resource type="Texture2D" uid="uid://cf7tbcqw1hk7l" path="res://addons/w_fast_prototyping/scene_3d/fast_scene_four_boxes/asset/dark_texture_05.png" id="7_j7x5w"]
+[ext_resource type="Texture2D" uid="uid://bxkajoa3ucp2h" path="res://addons/w_fast_prototyping/scene_3d/fast_scene_four_boxes/asset/red_texture_09.png" id="8_rxkg4"]
+[ext_resource type="Texture2D" uid="uid://dyp6c6tsvnl6g" path="res://addons/w_fast_prototyping/scene_3d/fast_scene_four_boxes/asset/purple_texture_09.png" id="9_qvwrs"]
+[ext_resource type="Texture2D" uid="uid://c2i4ylqbd8a07" path="res://addons/w_fast_prototyping/scene_3d/fast_scene_four_boxes/asset/orange_texture_09.png" id="10_636ia"]
+[ext_resource type="PackedScene" uid="uid://q8vybugnm4je" path="res://node/camp_fire.tscn" id="11_45wk4"]
+[ext_resource type="Texture2D" uid="uid://d6sdjw268lre" path="res://addons/w_fast_prototyping/scene_3d/fast_scene_four_boxes/asset/green_texture_09.png" id="11_jjg04"]
+[ext_resource type="MeshLibrary" uid="uid://xlh4o8nlxtj0" path="res://node/tree.meshlib" id="13_6xe2v"]
+[ext_resource type="MeshLibrary" uid="uid://dbhpqoi2bosm7" path="res://node/bush.meshlib" id="13_brgc1"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_eljmb"]
+panorama = ExtResource("1_vgh1y")
+
+[sub_resource type="Sky" id="Sky_j0373"]
+sky_material = SubResource("PanoramaSkyMaterial_eljmb")
+radiance_size = 5
+
+[sub_resource type="Environment" id="Environment_w0rsp"]
+background_mode = 2
+sky = SubResource("Sky_j0373")
+tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+fog_density = 0.005
+fog_sky_affect = 0.8
+volumetric_fog_density = 0.01
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qx3ox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h48hs"]
+albedo_texture = ExtResource("1_6p33q")
+metallic_specular = 0.1
+roughness_texture = ExtResource("3_hdtyw")
+normal_enabled = true
+normal_scale = 5.0
+normal_texture = ExtResource("2_ofb51")
+uv1_scale = Vector3(100, 100, 100)
+disable_receive_shadows = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_orvji"]
+material = SubResource("StandardMaterial3D_h48hs")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1hg6l"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bytj3"]
+albedo_texture = ExtResource("7_j7x5w")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0djc3"]
+albedo_texture = ExtResource("8_rxkg4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_shp37"]
+albedo_texture = ExtResource("9_qvwrs")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ky660"]
+albedo_texture = ExtResource("10_636ia")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lya5k"]
+albedo_texture = ExtResource("11_jjg04")
+refraction_enabled = true
+uv1_triplanar = true
+grow_amount = 0.575
 
 [node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w0rsp")
+camera_attributes = SubResource("CameraAttributesPractical_qx3ox")
+
+[node name="ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+mesh = SubResource("PlaneMesh_orvji")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_1hg6l")
+
+[node name="env" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="env"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 7.45108, 0)
+sky_mode = 2
+
+[node name="helper" type="Node3D" parent="."]
+
+[node name="FastFpsDisplay" parent="helper" instance=ExtResource("4_yjho2")]
+
+[node name="FastInputHandlers" parent="helper" instance=ExtResource("5_lbrvh")]
+
+[node name="solids" type="Node3D" parent="."]
+transform = Transform3D(-1000, 0, 0, 0, -1000, 0, 0, 0, -1000, 0, 0, 0)
+visible = false
+
+[node name="Floor" type="CSGBox3D" parent="solids"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.227873, 0)
+material_override = SubResource("StandardMaterial3D_bytj3")
+use_collision = true
+size = Vector3(1000, 0.5, 1000)
+
+[node name="RedBox" type="CSGBox3D" parent="solids"]
+transform = Transform3D(0.727449, 0, 0.686161, 0, 1, 0, -0.686161, 0, 0.727449, -3.37975, 0.248065, -3.03322)
+material_override = SubResource("StandardMaterial3D_0djc3")
+use_collision = true
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="PurpleBox" type="CSGBox3D" parent="solids"]
+transform = Transform3D(0.193241, 0, 0.981151, 0, 1, 0, -0.981151, 0, 0.193241, -6.28405, 0.491845, -0.823852)
+material_override = SubResource("StandardMaterial3D_shp37")
+use_collision = true
+
+[node name="OrangeBox" type="CSGBox3D" parent="solids"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.07314, 1.47283, 0)
+material_override = SubResource("StandardMaterial3D_ky660")
+use_collision = true
+size = Vector3(3, 3, 3)
+
+[node name="GreenBox" type="CSGBox3D" parent="solids"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.18384, 0.996808, 0)
+material_override = SubResource("StandardMaterial3D_lya5k")
+use_collision = true
+size = Vector3(2, 2, 25)
+
+[node name="FastPlayerCharacterThirdPerson" parent="." instance=ExtResource("6_gidbf")]
+
+[node name="camp_fire" parent="." instance=ExtResource("11_45wk4")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.0373026, 0, -3.90308)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="camp_fire"]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2, 0)
+light_color = Color(1, 0.372549, 0, 1)
+light_energy = 10.0
+
+[node name="trees" type="GridMap" parent="."]
+mesh_library = ExtResource("13_6xe2v")
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(3, 65535, 0, 4, 65528, 0, 6, 65529, 0, 9, 65531, 0, 12, 65532, 0, 14, 65534, 0, 14, 1, 0, 13, 3, 0, 12, 5, 0, 9, 7, 0, 7, 8, 0, 4, 10, 0, 2, 11, 0, 65535, 11, 0, 65530, 12, 0, 65528, 11, 0, 65525, 9, 0, 65522, 8, 0, 65521, 5, 0, 65521, 3, 0, 65521, 1, 0, 65522, 65535, 0, 65523, 65533, 0, 65525, 65531, 0, 65527, 65529, 0, 65530, 65528, 0, 65533, 65527, 0, 1, 65527, 0, 65535, 65526, 0, 65531, 65527, 0, 65528, 65527, 0, 65525, 65529, 0, 65523, 65531, 0, 65521, 65534, 0, 65519, 0, 0, 65519, 2, 0, 65518, 5, 0, 65518, 7, 0, 65519, 9, 0, 65521, 10, 0, 65523, 11, 0, 65525, 12, 0, 65528, 14, 0, 65533, 12, 0, 65531, 14, 0, 65534, 14, 0, 1, 13, 0, 3, 12, 0, 7, 11, 0, 9, 9, 0, 12, 7, 0, 16, 0, 0, 15, 65532, 0, 12, 65530, 0, 9, 65529, 0, 6, 65527, 0, 3, 65526, 0, 65533, 65525, 0, 65528, 1, 0, 65528, 7, 0, 65535, 8, 0, 5, 5, 0, 8, 2, 0, 6, 65532, 0, 1, 65531, 0, 65530, 65531, 0, 65527, 65534, 0, 65524, 4, 0, 65531, 2, 0, 11, 65535, 0)
+}
+
+[node name="bushes" type="GridMap" parent="."]
+mesh_library = ExtResource("13_brgc1")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(65533, 3, 0, 2, 7, 0, 7, 5, 0, 13, 1, 0, 11, 6, 0, 5, 12, 0, 65532, 12, 0, 65532, 8, 0, 65525, 11, 0, 65527, 65533, 0, 65522, 65530, 0, 65530, 65529, 0, 65524, 0, 0, 65528, 65523, 0, 65531, 65524, 0, 0, 65523, 0, 8, 65525, 0, 7, 65529, 0, 4, 65531, 0, 65532, 65531, 0, 65529, 1, 0, 4, 3, 0, 65518, 10, 0, 65512, 0, 0, 65510, 4, 0, 65512, 14, 0, 65522, 18, 0, 65516, 21, 0, 65527, 20, 0, 65528, 17, 0, 3, 19, 0, 7, 18, 0, 6, 16, 0, 11, 15, 0, 17, 10, 0, 20, 9, 0, 25, 2, 0, 19, 2, 0, 19, 65533, 0, 21, 65530, 0, 65528, 65526, 0, 65525, 65531, 0, 65518, 65527, 0, 4, 8, 0, 0, 10, 0, 1, 13, 0, 65535, 13, 0)
+}
