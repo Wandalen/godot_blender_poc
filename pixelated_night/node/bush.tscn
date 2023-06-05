@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://chh4mjk2n5dt3"]
+
+[ext_resource type="Texture2D" uid="uid://csruwu5kg3rvv" path="res://asset/generated/bush_Bush_Branch_qibjy2_atlas_Preview.png" id="1_1jdwd"]
+[ext_resource type="Texture2D" uid="uid://dqxp0m7enjhh8" path="res://node/noise.tres" id="1_k4pas"]
+
+[sub_resource type="Shader" id="Shader_f16bf"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.0.2.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix,depth_draw_opaque,cull_disabled,diffuse_burley,specular_schlick_ggx;
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color,filter_nearest_mipmap,repeat_enable;
+uniform float alpha_scissor_threshold;
+uniform float point_size : hint_range(0,128);
+uniform float roughness : hint_range(0,1);
+uniform sampler2D texture_metallic : hint_default_white,filter_nearest_mipmap,repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r,filter_nearest_mipmap,repeat_enable;
+uniform float specular;
+uniform float metallic;
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+
+group_uniforms wind;
+uniform sampler2D noise_tex;
+uniform float wind_speed = .1;
+uniform float wind_strength = .01;
+
+void vertex() 
+{
+
+	UV=UV*uv1_scale.xy+uv1_offset.xy;
+	
+	vec3 GLOBAL_VERTEX = (MODEL_MATRIX * vec4(VERTEX, 1.)).xyz;
+ 
+	float offset = TIME * wind_speed;
+	float noise = texture(noise_tex, vec2(GLOBAL_VERTEX.x-offset)).r;
+	noise -= .5;
+	noise *= wind_strength;
+	VERTEX.xy += noise * length(VERTEX.y) * length(VERTEX.xz);
+
+}
+
+
+
+void fragment() 
+{
+	vec2 base_uv = UV;
+	vec4 albedo_tex = texture(texture_albedo,base_uv);
+	albedo_tex *= COLOR;
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+	float metallic_tex = dot(texture(texture_metallic,base_uv),metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	vec4 roughness_texture_channel = vec4(1.0,0.0,0.0,0.0);
+	float roughness_tex = dot(texture(texture_roughness,base_uv),roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	SPECULAR = specular;
+	ALPHA *= albedo.a * albedo_tex.a;
+	ALPHA_SCISSOR_THRESHOLD = alpha_scissor_threshold;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lt8ag"]
+resource_name = "bush"
+render_priority = 0
+shader = SubResource("Shader_f16bf")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.5
+shader_parameter/metallic_texture_channel = Plane(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/texture_albedo = ExtResource("1_1jdwd")
+shader_parameter/wind_speed = 0.1
+shader_parameter/wind_strength = 0.01
+shader_parameter/noise_tex = ExtResource("1_k4pas")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4c3yk"]
+_surfaces = [{
+"aabb": AABB(-1, 1.91069e-15, -1, 2, 2, 2),
+"format": 4097,
+"index_count": 24,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0, 8, 0, 11, 0, 9, 0, 8, 0, 10, 0, 11, 0, 12, 0, 15, 0, 13, 0, 12, 0, 14, 0, 15, 0),
+"name": "bush",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(242, 4, 53, 63, 238, 173, 9, 39, 244, 4, 53, 191, 240, 4, 53, 191, 238, 173, 9, 39, 246, 4, 53, 63, 241, 4, 53, 63, 0, 0, 0, 64, 245, 4, 53, 191, 241, 4, 53, 191, 0, 0, 0, 64, 245, 4, 53, 63, 255, 255, 127, 191, 56, 127, 246, 50, 0, 0, 0, 179, 0, 0, 128, 63, 100, 192, 4, 51, 0, 0, 0, 179, 0, 0, 128, 191, 0, 0, 0, 64, 0, 0, 0, 51, 255, 255, 127, 63, 0, 0, 0, 64, 0, 0, 128, 51, 0, 0, 0, 51, 98, 192, 4, 51, 0, 0, 128, 63, 0, 0, 192, 179, 60, 127, 246, 50, 254, 255, 127, 191, 0, 0, 32, 52, 0, 0, 0, 64, 255, 255, 127, 63, 0, 0, 0, 179, 0, 0, 0, 64, 0, 0, 128, 191, 243, 4, 53, 63, 46, 189, 59, 51, 243, 4, 53, 63, 243, 4, 53, 191, 166, 133, 136, 50, 241, 4, 53, 191, 243, 4, 53, 63, 0, 0, 0, 64, 241, 4, 53, 63, 243, 4, 53, 191, 0, 0, 0, 64, 243, 4, 53, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_47gx6"]
+resource_name = "bush_bush"
+_surfaces = [{
+"aabb": AABB(-1, 1.91069e-15, -1, 2, 2, 2),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 4119,
+"index_count": 24,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0, 8, 0, 11, 0, 9, 0, 8, 0, 10, 0, 11, 0, 12, 0, 15, 0, 13, 0, 12, 0, 14, 0, 15, 0),
+"material": SubResource("ShaderMaterial_lt8ag"),
+"name": "bush",
+"primitive": 3,
+"vertex_count": 16,
+"vertex_data": PackedByteArray(242, 4, 53, 63, 238, 173, 9, 39, 244, 4, 53, 191, 0, 0, 255, 191, 255, 63, 255, 191, 240, 4, 53, 191, 238, 173, 9, 39, 246, 4, 53, 63, 0, 0, 255, 191, 255, 63, 255, 191, 241, 4, 53, 63, 0, 0, 0, 64, 245, 4, 53, 191, 0, 0, 255, 191, 255, 63, 255, 191, 241, 4, 53, 191, 0, 0, 0, 64, 245, 4, 53, 63, 0, 0, 255, 191, 255, 63, 255, 191, 255, 255, 127, 191, 56, 127, 246, 50, 0, 0, 0, 179, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 128, 63, 100, 192, 4, 51, 0, 0, 0, 179, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 128, 191, 0, 0, 0, 64, 0, 0, 0, 51, 255, 127, 255, 127, 255, 255, 255, 191, 255, 255, 127, 63, 0, 0, 0, 64, 0, 0, 128, 51, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 51, 98, 192, 4, 51, 0, 0, 128, 63, 255, 255, 255, 127, 255, 255, 0, 128, 0, 0, 192, 179, 60, 127, 246, 50, 254, 255, 127, 191, 255, 255, 255, 127, 255, 255, 0, 128, 0, 0, 32, 52, 0, 0, 0, 64, 255, 255, 127, 63, 255, 255, 255, 127, 255, 255, 255, 255, 0, 0, 0, 179, 0, 0, 0, 64, 0, 0, 128, 191, 255, 255, 255, 127, 255, 255, 0, 128, 243, 4, 53, 63, 46, 189, 59, 51, 243, 4, 53, 63, 255, 255, 255, 191, 0, 0, 255, 159, 243, 4, 53, 191, 166, 133, 136, 50, 241, 4, 53, 191, 255, 255, 255, 191, 0, 0, 255, 159, 243, 4, 53, 63, 0, 0, 0, 64, 241, 4, 53, 63, 255, 255, 255, 191, 0, 0, 255, 223, 243, 4, 53, 191, 0, 0, 0, 64, 243, 4, 53, 191, 255, 255, 255, 191, 0, 0, 255, 159)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4c3yk")
+
+[node name="bush" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_47gx6")
+skeleton = NodePath("")
