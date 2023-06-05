@@ -1,0 +1,1211 @@
+{
+  "pack": {
+    "_id": "japanese-shrine",
+    "name": "Japanese Shrine"
+  },
+  "name": "Norway spruce",
+  "tags": [
+    "nordic",
+    "fir",
+    "green",
+    "branch",
+    "abies",
+    "picea abies",
+    "norway spruce",
+    "pinaceae",
+    "northern europe",
+    "central europe",
+    "eastern europe",
+    "evergreen",
+    "coniferous",
+    "tree",
+    "needle",
+    "brown",
+    "archviz"
+  ],
+  "previews": {
+    "images": [
+      {
+        "contentLength": 169146,
+        "resolution": "360x360",
+        "uri": "qgpuO_Thumb.png",
+        "tags": [
+          "thumb"
+        ]
+      },
+      {
+        "contentLength": 502312,
+        "resolution": "720x720",
+        "uri": "qgpuO_Thumb_Retina.png",
+        "tags": [
+          "thumb",
+          "retina"
+        ]
+      },
+      {
+        "contentLength": 701855,
+        "resolution": "880x880",
+        "uri": "qgpuO_Preview.png",
+        "tags": [
+          "preview"
+        ]
+      },
+      {
+        "contentLength": 2365102,
+        "resolution": "1760x1760",
+        "uri": "qgpuO_Preview_Retina.png",
+        "tags": [
+          "preview",
+          "retina"
+        ]
+      },
+      {
+        "contentLength": 1983473,
+        "resolution": "2048x2048",
+        "uri": "qgpuO_Bake.jpg",
+        "tags": [
+          "bake",
+          "jpeg"
+        ]
+      },
+      {
+        "contentLength": 982,
+        "resolution": "24x24",
+        "uri": "IVNjLnNfMadzkv0AAABLdFJOUwArBLIUzCMCCQ6eg6ZJOJVRFGYvO4kpkILAx7GAcXpikWhnSB2iXLlzs6XinbhBNZfVHrWDxNKXw1d2XLkrbafSoI6nlojYllXg3YcDMlQAAAE0SURBVCjPnVLXcsIwEJSL3DvF3WBsisGF3kNJT/7/g2JkkcBMZjITPd3sSrd7ewLg34e8Fuw9HrVw0andE2cNP3y6J/g1U+Hkc71+SzAuBwDHsZ3NS7cV8xXYKq8UKQC1bg3E273b6T5yiChcDRQmv800UI/puemuLdznIT1E47esVNlkQRhKSxl5p0ktCPafp6YcAH6ctClBsGiku6PHR68veq87wFgCRUmOWQ1paf5AnZw+5NKXJ1I27BNY4qjy+QS+X8ZJV/ZIavcqV+RQBQqE+SWnaLiA4tKoWrEHp6fYkowaKIt+AzZxPMww8SfOChFyIuRt/RqI0RBGEsJJUx0o4XdS9NynFOSdUxtej/jJUBfhACXHGjPHuF2VbmNBfeZzt7Gz4hQXc+L3lZNT9o/P8QXpORpttBaYQAAAAABJRU5ErkJggg==",
+        "tags": [
+          "thumb",
+          "tiny"
+        ]
+      },
+      {
+        "contentLength": 25360,
+        "resolution": "360x360",
+        "uri": "qgpuO_Thumb_thumb.jpg",
+        "tags": [
+          "thumb",
+          "jpeg"
+        ]
+      },
+      {
+        "contentLength": 93359,
+        "resolution": "720x720",
+        "uri": "qgpuO_Thumb_Retina_thumb.jpg",
+        "tags": [
+          "thumb",
+          "retina",
+          "jpeg"
+        ]
+      },
+      {
+        "contentLength": 136483,
+        "resolution": "880x880",
+        "uri": "qgpuO_Preview_preview.jpg",
+        "tags": [
+          "preview",
+          "jpeg"
+        ]
+      },
+      {
+        "contentLength": 463363,
+        "resolution": "1760x1760",
+        "uri": "qgpuO_Preview_Retina_preview.jpg",
+        "tags": [
+          "preview",
+          "retina",
+          "jpeg"
+        ]
+      },
+      {
+        "contentLength": 249667,
+        "resolution": "1280x1280",
+        "uri": "qgpuO_Preview_Retina_sp.jpg",
+        "tags": [
+          "jpeg",
+          "sidepanel"
+        ]
+      }
+    ],
+    "relativeSize": "1x1"
+  },
+  "environment": {
+    "biome": "mediterranean-forest",
+    "region": "Scandinavia"
+  },
+  "json": {
+    "contentLength": 25540,
+    "uri": "qgpuO2.json"
+  },
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "0.4x0.4 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "0.007 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": false
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "10185 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "X-Rite ColorChecker Classic"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "SEM-MKII 4-3"
+    }
+  ],
+  "references": [
+    "https://en.wikipedia.org/wiki/Fir"
+  ],
+  "averageColor": "#565F2D",
+  "components": [
+    {
+      "minIntensity": 51,
+      "name": "Albedo",
+      "colorSpace": "sRGB",
+      "maxIntensity": 111,
+      "type": "albedo",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 27441372,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_4K_Albedo.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 1119291,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Albedo.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 8180949,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_2K_Albedo.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 411493,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Albedo.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 2363576,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_1K_Albedo.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 168771,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Albedo.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 681540,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_512_Albedo.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 65671,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Albedo.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 196073,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_256_Albedo.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 32243,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Albedo.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#565F2D"
+    },
+    {
+      "minIntensity": 115,
+      "name": "Displacement",
+      "colorSpace": "Linear",
+      "maxIntensity": 153,
+      "type": "displacement",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 41093452,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_4K_Displacement.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 456847,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Displacement.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 11599740,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_2K_Displacement.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 167796,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Displacement.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 3246961,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_1K_Displacement.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 80974,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Displacement.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 841711,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_512_Displacement.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 40966,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Displacement.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 249651,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_256_Displacement.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 26121,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Displacement.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#878787"
+    },
+    {
+      "minIntensity": 122,
+      "name": "Bump",
+      "colorSpace": "Linear",
+      "maxIntensity": 141,
+      "type": "bump",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 29553407,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_4K_Bump.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 986816,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Bump.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 7921842,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_2K_Bump.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 367763,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Bump.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 1322162,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_1K_Bump.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 156362,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Bump.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 447337,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_512_Bump.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 56530,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Bump.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 141675,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_256_Bump.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 26035,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Bump.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#828282"
+    },
+    {
+      "minIntensity": 36,
+      "name": "Gloss",
+      "colorSpace": "Linear",
+      "maxIntensity": 77,
+      "type": "gloss",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 34086801,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_4K_Gloss.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 1298792,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Gloss.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 9982649,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_2K_Gloss.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 443981,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Gloss.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 1687228,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_1K_Gloss.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 169275,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Gloss.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 568685,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_512_Gloss.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 64192,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Gloss.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 166001,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_256_Gloss.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 31644,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Gloss.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#303030"
+    },
+    {
+      "minIntensity": 127,
+      "name": "Normal",
+      "colorSpace": "Linear",
+      "maxIntensity": 160,
+      "type": "normal",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 18702948,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_4K_Normal.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 2599881,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Normal.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 5746393,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_2K_Normal.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 977700,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Normal.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 1435219,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_1K_Normal.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 351116,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Normal.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 397492,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_512_Normal.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 114637,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Normal.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 114287,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_256_Normal.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 44580,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Normal.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#8080FD"
+    },
+    {
+      "minIntensity": 179,
+      "name": "Roughness",
+      "colorSpace": "Linear",
+      "maxIntensity": 215,
+      "type": "roughness",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 33039276,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_4K_Roughness.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 1263536,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Roughness.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 9752409,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_2K_Roughness.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 430805,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Roughness.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 1595175,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_1K_Roughness.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 165701,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Roughness.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 463929,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_512_Roughness.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 62822,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Roughness.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 166247,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_256_Roughness.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 31220,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Roughness.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#CDCDCD"
+    },
+    {
+      "minIntensity": 52,
+      "name": "Specular",
+      "colorSpace": "sRGB",
+      "maxIntensity": 53,
+      "type": "specular",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 2465986,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_4K_Specular.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 230872,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Specular.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 2043561,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_2K_Specular.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 73432,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Specular.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 289181,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_1K_Specular.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 33559,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Specular.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 98759,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_512_Specular.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 22095,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Specular.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 33926,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_256_Specular.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 18895,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Specular.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#353535"
+    },
+    {
+      "minIntensity": 33,
+      "name": "Translucency",
+      "colorSpace": "sRGB",
+      "maxIntensity": 79,
+      "type": "translucency",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 27149316,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_4K_Translucency.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 1026508,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Translucency.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 8227674,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_2K_Translucency.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 404150,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Translucency.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 2402879,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_1K_Translucency.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 165837,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Translucency.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 691373,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_512_Translucency.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 62481,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Translucency.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 198903,
+                  "bitDepth": 16,
+                  "uri": "qgpuO_256_Translucency.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 30908,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Translucency.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#3C3D2F"
+    },
+    {
+      "minIntensity": 0,
+      "name": "Opacity",
+      "colorSpace": "Linear",
+      "maxIntensity": 255,
+      "type": "opacity",
+      "uris": [
+        {
+          "physicalSize": "0.4x0.4",
+          "resolutions": [
+            {
+              "resolution": "4096x4096",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 14988397,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_4K_Opacity.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 1908919,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_4K_Opacity.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "2048x2048",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 5056803,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_2K_Opacity.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 732982,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_2K_Opacity.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "1024x1024",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 1448521,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_1K_Opacity.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 280543,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_1K_Opacity.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "512x512",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 478317,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_512_Opacity.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 99657,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_512_Opacity.jpg"
+                }
+              ]
+            },
+            {
+              "resolution": "256x256",
+              "formats": [
+                {
+                  "mimeType": "image/x-exr",
+                  "contentLength": 167901,
+                  "bitDepth": 32,
+                  "uri": "qgpuO_256_Opacity.exr"
+                },
+                {
+                  "mimeType": "image/jpeg",
+                  "contentLength": 41075,
+                  "bitDepth": 8,
+                  "uri": "qgpuO_256_Opacity.jpg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "averageColor": "#2C2C2C"
+    }
+  ],
+  "referencePreviews": {
+    "maps": [
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 168771,
+        "type": "albedo",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 80974,
+        "type": "displacement",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 156362,
+        "type": "bump",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 169275,
+        "type": "gloss",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 351116,
+        "type": "normal",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 165701,
+        "type": "roughness",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 33559,
+        "type": "specular",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 165837,
+        "type": "translucency",
+        "uri": ""
+      },
+      {
+        "mimeType": "image/jpeg",
+        "resolution": "1024x1024",
+        "contentLength": 280543,
+        "type": "opacity",
+        "uri": ""
+      }
+    ]
+  },
+  "properties": [],
+  "categories": [
+    "atlas",
+    "tree",
+    "needle"
+  ],
+  "points": 1,
+  "assetCategories": {
+    "atlas": {
+      "tree": {
+        "needle": {},
+        "branch": {}
+      }
+    }
+  },
+  "semanticTags": {
+    "city": [],
+    "theme": [
+      "healthy",
+      " fresh",
+      " coniferous",
+      " perennial",
+      "conifer"
+    ],
+    "name": "Norway spruce",
+    "subject_matter": "nature",
+    "color": [
+      "brown",
+      "green"
+    ],
+    "industry": [
+      "archviz",
+      "games",
+      "VFX"
+    ],
+    "contains": [
+      "leaves",
+      "branches",
+      "fir",
+      "spruce",
+      "pinaceae"
+    ],
+    "maxSize": 0.4,
+    "locations": {
+      "Global": {
+        "Global": {}
+      }
+    },
+    "environment": [
+      "forest biome",
+      "taiga biome",
+      "tundra biome"
+    ],
+    "state": [
+      "old"
+    ],
+    "minSize": 0.4,
+    "latin_name": "picea abies",
+    "architectural_style": {},
+    "interior_exterior": [],
+    "resolution": 4096,
+    "asset_type": "atlas",
+    "orientation": []
+  },
+  "comp_version": 1,
+  "revised": false,
+  "id": "qgpuO2",
+  "physicalSize": "0.4x0.4"
+}
